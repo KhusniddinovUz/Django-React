@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addLead } from '../../actions/leads';
 
-const Form = () => {
+const Form = (props) => {
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -18,7 +20,7 @@ const Form = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    props.addLead(user);
     setUser({
       name: '',
       email: '',
@@ -70,4 +72,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default connect(null, { addLead })(Form);

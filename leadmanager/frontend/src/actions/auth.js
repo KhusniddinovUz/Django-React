@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { AUTH_ERROR, USER_LOADED, USER_LOADING } from './types';
+import {
+  AUTH_ERROR,
+  USER_LOADED,
+  USER_LOADING,
+  LOGIN_FAIL,
+  LOGIN_SUCCESS,
+} from './types';
 import { returnErrors } from './errors';
 
 //Check token & loading
@@ -25,5 +31,20 @@ export const loadUser = () => (dispatch, getState) => {
     .catch((err) => {
       dispatch(returnErrors(err.response.data, err.response.status));
       dispatch({ type: AUTH_ERROR });
+    });
+};
+
+export const login = (username, password) => (dispatch) => {
+  axios
+    .post('http://localhost:8000/api/auth/login', {
+      username: username,
+      password: password,
+    })
+    .then((res) => {
+      dispatch({ type: LOGIN_SUCCESS, payload: res.data });
+    })
+    .catch((err) => {
+      dispatch(returnErrors(err.response.data, err.response.status));
+      dispatch({ type: LOGIN_FAIL });
     });
 };

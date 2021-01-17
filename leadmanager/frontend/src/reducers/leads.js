@@ -3,8 +3,7 @@ import { GET_LEADS, DELETE_LEAD, ADD_LEAD } from '../actions/types.js';
 const initialState = {
   leads: [],
 };
-
-export default (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_LEADS:
       return {
@@ -25,3 +24,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default rootReducer;

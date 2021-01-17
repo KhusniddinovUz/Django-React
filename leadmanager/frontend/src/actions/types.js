@@ -2,5 +2,6 @@ export const GET_LEADS = 'GET_LEADS';
 export const DELETE_LEAD = 'DELETE_LEAD';
 export const ADD_LEAD = 'ADD_LEAD';
 export const GET_ERRORS = 'GET_ERRORS';
+export const DELETE_ERRORS = 'DELETE_ERRORS';
 export const CREATE_MESSAGES = 'CREATE_MESSAGES';
 export const DELETE_MESSAGES = 'DELETE_MESSAGES';

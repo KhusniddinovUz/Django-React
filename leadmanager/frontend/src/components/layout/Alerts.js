@@ -2,13 +2,23 @@ import React, { useEffect } from 'react';
 import { withAlert } from 'react-alert';
 import { connect } from 'react-redux';
 import { deleteMessage } from '../../actions/messages';
+import { deleteErrors } from '../../actions/errors';
 
 const Alerts = (props) => {
-  const { error, message, alert, deleteMessage } = props;
+  const { error, message, alert, deleteMessage, deleteErrors } = props;
   useEffect(() => {
-    if (error.msg.name) alert.error(`Name: ${error.msg.name.join()}`);
-    if (error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
-    if (error.msg.message) alert.error(`Message: ${error.msg.message.join()}`);
+    if (error.msg.name) {
+      alert.error(`Name: ${error.msg.name.join()}`);
+      deleteErrors();
+    }
+    if (error.msg.email) {
+      alert.error(`Email: ${error.msg.email.join()}`);
+      deleteErrors();
+    }
+    if (error.msg.message) {
+      alert.error(`Message: ${error.msg.message.join()}`);
+      deleteErrors();
+    }
     if (message.deleteLead) {
       alert.success(message.deleteLead);
       deleteMessage();
@@ -27,4 +37,6 @@ const mapStateToProps = (state) => ({
   message: state.messages,
 });
 
-export default connect(mapStateToProps, { deleteMessage })(withAlert()(Alerts));
+export default connect(mapStateToProps, { deleteMessage, deleteErrors })(
+  withAlert()(Alerts)
+);

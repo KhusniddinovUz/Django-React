@@ -1,4 +1,4 @@
-import { GET_ERRORS } from '../actions/types';
+import { GET_ERRORS, DELETE_ERRORS } from '../actions/types';
 const initialState = {
   msg: {},
   status: null,
@@ -11,6 +11,8 @@ const errors = (state = initialState, action) => {
         msg: action.payload.msg,
         status: action.payload.status,
       };
+    case DELETE_ERRORS:
+      return (state = initialState);
     default:
       return state;
   }

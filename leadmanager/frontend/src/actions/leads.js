@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { GET_LEADS, DELETE_LEAD, ADD_LEAD, GET_ERRORS } from './types';
 import { createMessage } from './messages';
+import { returnErrors } from './errors';
 
 //Get Leads
 export const getLeads = () => (dispatch) => {
@@ -9,7 +10,9 @@ export const getLeads = () => (dispatch) => {
     .then((res) => {
       dispatch({ type: GET_LEADS, payload: res.data });
     })
-    .catch((err) => console.log(err));
+    .catch((err) =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };
 
 //Delete Lead
@@ -34,14 +37,7 @@ export const addLead = (user) => (dispatch) => {
         payload: res.data,
       });
     })
-    .catch((err) => {
-      const errors = {
-        msg: err.response.data,
-        status: err.response.status,
-      };
-      dispatch({
-        type: GET_ERRORS,
-        payload: errors,
-      });
-    });
+    .catch((err) =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };

@@ -9,6 +9,7 @@ const Alerts = (props) => {
     if (error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
     if (error.msg.message) alert.error(`Message: ${error.msg.message.join()}`);
     if (message.deleteLead) alert.success(message.deleteLead);
+    if (message.addLead) alert.success(message.addLead);
   });
 
   return <></>;

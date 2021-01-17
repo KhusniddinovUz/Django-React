@@ -28,6 +28,7 @@ export const addLead = (user) => (dispatch) => {
   axios
     .post('http://localhost:8000/api/leads/', user)
     .then((res) => {
+      dispatch(createMessage({ addLead: 'Lead Added' }));
       dispatch({
         type: ADD_LEAD,
         payload: res.data,

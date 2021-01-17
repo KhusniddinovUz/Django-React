@@ -10,8 +10,14 @@ import {
 import Register from './components/accounts/Register';
 import Login from './components/accounts/Login';
 import PrivateRoute from './components/common/PrivateRoute';
+import { loadUser } from './actions/auth';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+const App = (props) => {
+  useEffect(() => {
+    props.loadUser();
+  }, []);
   return (
     <Router>
       <div className='App'>
@@ -27,6 +33,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
-export default App;
+export default connect(null, { loadUser })(App);

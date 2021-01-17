@@ -5,3 +5,6 @@ export const GET_ERRORS = 'GET_ERRORS';
 export const DELETE_ERRORS = 'DELETE_ERRORS';
 export const CREATE_MESSAGES = 'CREATE_MESSAGES';
 export const DELETE_MESSAGES = 'DELETE_MESSAGES';
+export const USER_LOADING = 'USER_LOADING';
+export const USER_LOADED = 'USER_LOADED';
+export const AUTH_ERROR = 'AUTH_ERROR';

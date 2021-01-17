@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Register from './components/accounts/Register';
 import Login from './components/accounts/Login';
+import PrivateRoute from './components/common/PrivateRoute';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Header />
         <div className='container'>
           <Switch>
-            <Route exact path='/' component={Dashboard} />
+            <PrivateRoute exact path='/' component={Dashboard} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
           </Switch>

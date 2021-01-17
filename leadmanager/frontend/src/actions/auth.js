@@ -5,6 +5,7 @@ import {
   USER_LOADING,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  LOG_OUT,
 } from './types';
 import { returnErrors } from './errors';
 
@@ -46,5 +47,25 @@ export const login = (username, password) => (dispatch) => {
     .catch((err) => {
       dispatch(returnErrors(err.response.data, err.response.status));
       dispatch({ type: LOGIN_FAIL });
+    });
+};
+
+export const logout = () => (dispatch, getState) => {
+  const token = getState().auth.token;
+  const config = {
+    headers: {
+      'Content-Type': 'applicatino/json',
+    },
+  };
+  if (token) {
+    config.headers['Authorization'] = `Token ${token}`;
+  }
+  axios
+    .post('http://localhost:8000/api/auth/logout/', null, config)
+    .then((res) => {
+      dispatch({ type: LOG_OUT });
+    })
+    .catch((err) => {
+      dispatch(returnErrors(err.response.data, err.response.status));
     });
 };

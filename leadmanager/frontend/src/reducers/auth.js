@@ -4,6 +4,7 @@ import {
   AUTH_ERROR,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  LOG_OUT,
 } from '../actions/types';
 const initialState = {
   token: localStorage.getItem('token'),
@@ -35,6 +36,7 @@ const auth = (state = initialState, action) => {
       };
     case AUTH_ERROR:
     case LOGIN_FAIL:
+    case LOG_OUT:
       localStorage.removeItem('token');
       return {
         ...state,

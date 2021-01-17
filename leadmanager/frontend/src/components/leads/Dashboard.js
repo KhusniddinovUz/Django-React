@@ -5,8 +5,8 @@ import Form from './Form';
 const Dashboard = () => {
   return (
     <div className='Dashboard'>
-      <Leads />
       <Form />
+      <Leads />
     </div>
   );
 };

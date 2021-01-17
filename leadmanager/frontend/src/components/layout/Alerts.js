@@ -19,12 +19,24 @@ const Alerts = (props) => {
       alert.error(`Message: ${error.msg.message.join()}`);
       deleteErrors();
     }
+    if (error.msg.username) {
+      alert.error(error.msg.username.join());
+      deleteErrors();
+    }
+    if (error.msg.non_field_errors) {
+      alert.error(error.msg.non_field_errors.join());
+      deleteErrors();
+    }
     if (message.deleteLead) {
       alert.success(message.deleteLead);
       deleteMessage();
     }
     if (message.addLead) {
       alert.success(message.addLead);
+      deleteMessage();
+    }
+    if (message.passwordNotMatch) {
+      alert.error(message.passwordNotMatch);
       deleteMessage();
     }
   });

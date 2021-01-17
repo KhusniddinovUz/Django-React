@@ -3,18 +3,20 @@ import { withAlert } from 'react-alert';
 import { connect } from 'react-redux';
 
 const Alerts = (props) => {
-  console.log(props.error);
+  const { error, message, alert } = props;
   useEffect(() => {
-    if (props.error.msg.name)
-      props.alert.error(`Name: ${props.error.msg.name.join()}`);
-    if (props.error.msg.email)
-      props.alert.error(`Email: ${props.error.msg.email.join()}`);
+    if (error.msg.name) alert.error(`Name: ${error.msg.name.join()}`);
+    if (error.msg.email) alert.error(`Email: ${error.msg.email.join()}`);
+    if (error.msg.message) alert.error(`Message: ${error.msg.message.join()}`);
+    if (message.deleteLead) alert.success(message.deleteLead);
   });
+
   return <></>;
 };
 
 const mapStateToProps = (state) => ({
   error: state.errors,
+  message: state.messages,
 });
 
 export default connect(mapStateToProps)(withAlert()(Alerts));

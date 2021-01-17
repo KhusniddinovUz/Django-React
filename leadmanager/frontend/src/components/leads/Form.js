@@ -35,7 +35,6 @@ const Form = (props) => {
         <div className='form-group mt-2'>
           <label>Name</label>
           <input
-            required
             className='form-control'
             type='text'
             name='name'

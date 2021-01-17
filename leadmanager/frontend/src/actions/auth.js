@@ -66,11 +66,11 @@ export const logout = () => (dispatch, getState) => {
 
 //Setup config with token
 
-const tokenConfig = (getState) => {
+export const tokenConfig = (getState) => {
   const token = getState().auth.token;
   const config = {
     headers: {
-      'Content-Type': 'applicatino/json',
+      'Content-Type': 'application/json',
     },
   };
 

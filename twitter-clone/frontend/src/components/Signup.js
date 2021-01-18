@@ -1,7 +1,11 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { register } from '../action/auth';
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
   const [user, setUser] = useState({
     username: '',
     email: '',
@@ -9,11 +13,17 @@ const SignUp = () => {
     password2: '',
   });
   const [border, setBorder] = useState('form-control');
-
+  const { username, email, password1, password2 } = user;
   const submitHandler = (e) => {
     e.preventDefault();
     if (passwordValid()) {
-      // Fetch API for signup
+      dispatch(register({ username, email, password: password1 }));
+      setUser({
+        username: '',
+        email: '',
+        password1: '',
+        password2: '',
+      });
     }
   };
 
@@ -32,6 +42,10 @@ const SignUp = () => {
     }
   };
 
+  if (auth.isAuthenticated) {
+    return <Redirect to='' />;
+  }
+
   return (
     <div className='container SignUp p-3'>
       <h1 className='mt-4 p-1 text-center'>Signup for user profile</h1>
@@ -44,6 +58,7 @@ const SignUp = () => {
             id='username'
             placeholder='Enter Username'
             onChange={changeHandler}
+            value={username}
           />
         </div>
         <div className='form-group p-2 '>
@@ -55,6 +70,7 @@ const SignUp = () => {
             aria-describedby='emailHelp'
             placeholder='Enter email'
             onChange={changeHandler}
+            value={email}
           />
         </div>
         <div className='form-group p-2'>
@@ -65,6 +81,7 @@ const SignUp = () => {
             id='password1'
             placeholder='Password'
             onChange={changeHandler}
+            value={password1}
           />
           <small>Must be 6 chars at least</small>
         </div>
@@ -76,6 +93,7 @@ const SignUp = () => {
             id='password2'
             placeholder='Password'
             onChange={changeHandler}
+            value={password2}
           />
         </div>
         <div className='container d-flex align-items-center mt-2'>

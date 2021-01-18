@@ -3,6 +3,8 @@ import {
   LOGIN_SUCCESS,
   SIGNUP_FAIL,
   SIGNUP_SUCCESS,
+  USER_LOADED,
+  USER_NOTLOADED,
 } from '../action/types';
 
 const initialState = {
@@ -17,15 +19,28 @@ const auth = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS:
     case SIGNUP_SUCCESS:
+      localStorage.setItem('twitter-token', action.payload.token);
       return {
         ...state,
         isAuthenticated: true,
         username: action.payload.user.username,
         email: action.payload.user.email,
+        token: localStorage.getItem('twitter-token'),
       };
     case LOGIN_FAIL:
     case SIGNUP_FAIL:
       console.log(action.payload);
+      break;
+    case USER_LOADED:
+      return {
+        ...state,
+        isAuthenticated: true,
+      };
+    case USER_NOTLOADED:
+      return {
+        ...state,
+        isAuthenticated: false,
+      };
     default:
       return state;
   }

@@ -7,7 +7,7 @@ const Header = (props) => {
   const { isAuthenticated, user } = props.auth;
 
   const guestLinks = (
-    <ul className='navbar-nav ml-auto mt-2 mt-lg-0'>
+    <ul className='navbar-nav mt-2'>
       <li className='nav-item'>
         <Link to='/register' className='nav-link'>
           Register
@@ -39,7 +39,7 @@ const Header = (props) => {
     <div className='Header'>
       <nav className='navbar navbar-expand-sm navbar-light bg-light'>
         <div className='container d-flex justify-content-center align-items-center'>
-          <div className='collapse navbar-collapse' id='navbarTogglerDemo01'>
+          <div className='container' id='navbarTogglerDemo01'>
             <a className='navbar-brand' href=''>
               Lead Manager
             </a>

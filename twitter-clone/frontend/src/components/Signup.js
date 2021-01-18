@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [user, setUser] = useState({
@@ -83,7 +83,7 @@ const SignUp = () => {
             Register
           </button>
           <div className='text-center w-100'>
-            Already have an account? <a to='/login'>Login</a> here
+            Already have an account? <Link to='/login'>Login</Link> here
           </div>
         </div>
       </form>

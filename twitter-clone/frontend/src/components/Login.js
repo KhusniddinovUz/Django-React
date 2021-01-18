@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { login } from '../action/auth';
 
 const Login = () => {
   const [user, setUser] = useState({ username: '', password: '' });
-
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const changeHandler = (e) => {
     const newuser = Object.assign({}, user, { [e.target.id]: e.target.value });
     setUser(newuser);
@@ -11,9 +15,15 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    //Fetch API for login
-    console.log(user);
+    dispatch(login(user));
+    // console.log(user);
   };
+
+  if (auth.isAuthenticated) {
+    return <Redirect to='' />;
+  }
+
+  const { username, password } = user;
 
   return (
     <div className='container SignUp p-3'>
@@ -27,6 +37,7 @@ const Login = () => {
             id='username'
             placeholder='Enter Username'
             onChange={changeHandler}
+            value={username}
           />
         </div>
 
@@ -38,6 +49,7 @@ const Login = () => {
             id='password'
             placeholder='Password'
             onChange={changeHandler}
+            value={password}
           />
         </div>
         <div className='container d-flex align-items-center mt-2'>

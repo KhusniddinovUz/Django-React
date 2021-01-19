@@ -18,12 +18,6 @@ const SignUp = () => {
     e.preventDefault();
     if (passwordValid()) {
       dispatch(register({ username, email, password: password1 }));
-      setUser({
-        username: '',
-        email: '',
-        password1: '',
-        password2: '',
-      });
     }
   };
 

@@ -1,7 +1,5 @@
 import {
-  LOGIN_FAIL,
   LOGIN_SUCCESS,
-  SIGNUP_FAIL,
   SIGNUP_SUCCESS,
   USER_LOADED,
   USER_NOTLOADED,
@@ -27,10 +25,6 @@ const auth = (state = initialState, action) => {
         email: action.payload.user.email,
         token: localStorage.getItem('twitter-token'),
       };
-    case LOGIN_FAIL:
-    case SIGNUP_FAIL:
-      console.log(action.payload);
-      return state;
     case USER_LOADED:
       return {
         ...state,

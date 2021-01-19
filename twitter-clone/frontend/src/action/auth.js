@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { url } from '../url';
 import {
-  LOGIN_FAIL,
+  ADD_ERROR,
   LOGIN_SUCCESS,
-  SIGNUP_FAIL,
   SIGNUP_SUCCESS,
   USER_LOADED,
   USER_NOTLOADED,
@@ -40,7 +39,7 @@ export const login = (user) => (dispatch) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     })
     .catch((err) => {
-      dispatch({ type: LOGIN_FAIL, payload: err.response.data });
+      dispatch({ type: ADD_ERROR, payload: err.response.data });
     });
 };
 
@@ -57,6 +56,6 @@ export const register = (user) => (dispatch) => {
       dispatch({ type: SIGNUP_SUCCESS, payload: res.data });
     })
     .catch((err) => {
-      dispatch({ type: SIGNUP_FAIL, payload: err.response.data });
+      dispatch({ type: ADD_ERROR, payload: err.response.data });
     });
 };

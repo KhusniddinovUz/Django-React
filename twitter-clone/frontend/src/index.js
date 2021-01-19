@@ -4,10 +4,19 @@ import './index.scss';
 import App from './App';
 import store from './store';
 import { Provider } from 'react-redux';
+import AlertTemplate from 'react-alert-template-basic';
+import { Provider as AlertProvider } from 'react-alert';
+
+const alertConfig = {
+  position: 'top center',
+  timeout: '3000',
+};
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AlertProvider template={AlertTemplate} {...alertConfig}>
+      <App />
+    </AlertProvider>
   </Provider>,
   document.getElementById('root')
 );

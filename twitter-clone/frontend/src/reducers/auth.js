@@ -29,6 +29,7 @@ const auth = (state = initialState, action) => {
       };
     case LOGIN_FAIL:
     case SIGNUP_FAIL:
+      console.log(action.payload);
       return state;
     case USER_LOADED:
       return {

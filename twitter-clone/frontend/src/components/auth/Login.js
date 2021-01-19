@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { login } from '../action/auth';
+import { login } from '../../action/auth';
 
 const Login = () => {
   const [user, setUser] = useState({ username: '', password: '' });

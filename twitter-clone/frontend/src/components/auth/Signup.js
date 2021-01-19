@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { register } from '../action/auth';
+import { register } from '../../action/auth';
 
 const SignUp = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,15 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/auth/Login';
+import Signup from './components/auth/Signup';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import { loadUser } from './action/auth';
+import Navbar from './components/layout/Navbar';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,11 +20,16 @@ const App = () => {
   return (
     <Router>
       <div className='App'>
+        {!auth.isAuthenticated ? <Redirect to='/login' /> : ''}
         <Switch>
           <Route
             exact
             path='/'
-            render={() => <div>Authenticated: {`${auth.isAuthenticated}`}</div>}
+            render={() => (
+              <div className='Home'>
+                <Navbar />
+              </div>
+            )}
           />
           <Route path='/register' component={Signup} />
           <Route path='/login' component={Login} />

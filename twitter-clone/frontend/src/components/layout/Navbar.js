@@ -14,25 +14,25 @@ const Navbar = () => {
           </li>
         </div>
         <div className='list-group-item'>
-          <li className=''>
+          <li>
             <i className='far fa-bell' />
             Notifications
           </li>
         </div>
         <div className='list-group-item'>
-          <li className=''>
+          <li>
             <i className='far fa-envelope' />
             Messages
           </li>
         </div>
         <div className='list-group-item'>
-          <li className=''>
+          <li>
             <i className='far fa-user' />
             Profile
           </li>
         </div>
         <div className='list-group-item'>
-          <li className=''>
+          <li>
             <i className='fas fa-bars' />
             <span>More</span>
           </li>

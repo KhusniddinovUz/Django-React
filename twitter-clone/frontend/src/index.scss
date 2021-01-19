@@ -30,14 +30,7 @@ $hovercolor: #e9f3fe;
             }
           }
           border: none;
-          &:hover {
-            li {
-              color: $maincolor;
-              i {
-                color: $maincolor !important;
-              }
-            }
-          }
+
           li {
             font-size: 20px;
             border: none;
@@ -48,6 +41,10 @@ $hovercolor: #e9f3fe;
             cursor: pointer;
             &:hover {
               background: $hovercolor;
+              color: $maincolor;
+              i {
+                color: $maincolor !important;
+              }
             }
             i {
               color: #25292e;

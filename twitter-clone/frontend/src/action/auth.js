@@ -39,7 +39,7 @@ export const login = (user) => (dispatch) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     })
     .catch((err) => {
-      dispatch({ type: LOGIN_FAIL, payload: err.data });
+      dispatch({ type: LOGIN_FAIL, payload: err });
     });
 };
 

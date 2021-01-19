@@ -18,9 +18,11 @@ $hovercolor: #e9f3fe;
     grid-template-columns: 1fr 2fr 1.5fr;
     .Navbar {
       font-weight: 700;
+      border-right: 1px solid black;
       ul {
-        border-right: 1px solid black;
         div {
+          border: none;
+          margin: 0;
           #twitter {
             color: $maincolor;
             font-size: 30px;
@@ -30,7 +32,6 @@ $hovercolor: #e9f3fe;
               background: $hovercolor;
             }
           }
-          border: none;
 
           li {
             font-size: 20px;
@@ -55,11 +56,7 @@ $hovercolor: #e9f3fe;
             }
           }
           button {
-            background: $maincolor;
             width: 200px;
-            padding: 10px;
-            border-radius: 30px;
-            color: #fff;
             font-weight: 700;
           }
         }
@@ -67,19 +64,19 @@ $hovercolor: #e9f3fe;
     }
     .TweetHome {
       border-right: 1px solid #000;
-      div {
+      border-bottom: 1px solid #25292e;
+      height: 200px;
+      & > div {
         padding: 10px 20px;
         font-size: 20px;
         border-bottom: 1px solid #25292e;
         font-weight: 700;
       }
       form {
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         .profile-image {
           border-radius: 50%;
+          width: 50px;
+          height: 50px;
         }
         textarea {
           margin-left: 30px;
@@ -87,6 +84,10 @@ $hovercolor: #e9f3fe;
           resize: none;
           border: none;
           outline: none;
+          font-size: 20px;
+          &::placeholder {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -100,6 +101,16 @@ $hovercolor: #e9f3fe;
     color: $maincolor !important;
   }
 }
+.butn {
+  background-color: $maincolor;
+  color: #fff;
+  border-radius: 30px;
+  &:hover {
+    color: #fff;
+  }
+}
+
+//Media Query
 @media (min-width: 768px) and (max-width: 992px) {
   .App {
     .SignUp {

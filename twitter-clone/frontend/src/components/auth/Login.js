@@ -32,6 +32,7 @@ const Login = () => {
         <div className='form-group p-2 '>
           <label htmlFor='username'>Username</label>
           <input
+            required
             type='text'
             className='form-control'
             id='username'
@@ -44,6 +45,7 @@ const Login = () => {
         <div className='form-group p-2'>
           <label htmlFor='password'>Password</label>
           <input
+            required
             type='password'
             className='form-control'
             id='password'

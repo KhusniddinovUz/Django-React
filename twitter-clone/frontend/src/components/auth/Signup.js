@@ -47,6 +47,7 @@ const SignUp = () => {
         <div className='form-group p-2 '>
           <label htmlFor='username'>Username</label>
           <input
+            required
             type='text'
             className='form-control'
             id='username'
@@ -58,6 +59,7 @@ const SignUp = () => {
         <div className='form-group p-2 '>
           <label htmlFor='email'>Email address</label>
           <input
+            required
             type='email'
             className='form-control'
             id='email'

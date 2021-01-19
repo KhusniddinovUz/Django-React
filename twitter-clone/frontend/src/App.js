@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import { loadUser } from './action/auth';
 import Navbar from './components/layout/Navbar';
+import TweetHome from './components/layout/TweetHome';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const App = () => {
             render={() => (
               <div className='Home'>
                 <Navbar />
+                <TweetHome />
               </div>
             )}
           />

@@ -14,8 +14,9 @@ $hovercolor: #e9f3fe;
     }
   }
   .Home {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;
     .Navbar {
-      width: 300px;
       font-weight: 700;
       ul {
         border-right: 1px solid black;
@@ -61,6 +62,31 @@ $hovercolor: #e9f3fe;
             color: #fff;
             font-weight: 700;
           }
+        }
+      }
+    }
+    .TweetHome {
+      border-right: 1px solid #000;
+      div {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-bottom: 1px solid #25292e;
+        font-weight: 700;
+      }
+      form {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .profile-image {
+          border-radius: 50%;
+        }
+        textarea {
+          margin-left: 30px;
+          width: 80%;
+          resize: none;
+          border: none;
+          outline: none;
         }
       }
     }

@@ -11,6 +11,7 @@ import {
 import { loadUser } from './action/auth';
 import Navbar from './components/layout/Navbar';
 import TweetHome from './components/layout/TweetHome';
+import Alerts from './components/layout/Alerts';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <Router>
       <div className='App'>
+        <Alerts />
         {!auth.isAuthenticated ? <Redirect to='/login' /> : ''}
         <Switch>
           <Route

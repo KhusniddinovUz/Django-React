@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/twitter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twitter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,7 @@
       <workItem from="1611118788385" duration="434000" />
       <workItem from="1611119387357" duration="763000" />
       <workItem from="1611124051276" duration="447000" />
+      <workItem from="1611124520730" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>
@@ -84,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611123284772</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create tweets app">
+      <created>1611124642818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611124642818</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +116,7 @@
     <MESSAGE value="Update pipenv" />
     <MESSAGE value="Change alertOptions" />
     <MESSAGE value="update pipenv" />
-    <option name="LAST_COMMIT_MESSAGE" value="update pipenv" />
+    <MESSAGE value="Create tweets app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create tweets app" />
   </component>
 </project>

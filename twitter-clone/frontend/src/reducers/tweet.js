@@ -6,9 +6,11 @@ const initialState = {
 const tweet = (state = initialState, action) => {
   switch (action.type) {
     case TWEET_ADD:
+      const newTweets = [...state.tweets];
+      newTweets.push(action.payload);
       return {
         ...state,
-        tweets: state.tweets.push(action.payload),
+        tweets: newTweets,
       };
     default:
       return state;

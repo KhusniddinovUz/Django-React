@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/action/tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/action/tweet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layout/TweetHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layout/TweetHome.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1611119387357" duration="763000" />
       <workItem from="1611124051276" duration="447000" />
       <workItem from="1611124520730" duration="4397000" />
-      <workItem from="1611135590628" duration="3665000" />
+      <workItem from="1611135590628" duration="4304000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>

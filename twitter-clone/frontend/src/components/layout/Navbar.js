@@ -37,7 +37,7 @@ const Navbar = () => {
             <span>More</span>
           </li>
         </div>
-        <div className='list-group-item'>
+        <div className='mx-auto'>
           <button className='btn butn p-3'>Tweet</button>
         </div>
       </ul>

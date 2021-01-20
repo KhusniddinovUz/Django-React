@@ -15,9 +15,11 @@ export const addTweet = (tweet) => (dispatch, getState) => {
   axios
     .post(`${url}/tweet/`, tweet, config)
     .then((res) => {
+      console.log(res.data);
       dispatch({ type: TWEET_ADD, payload: res.data });
     })
     .catch((err) => {
+      console.log(err);
       dispatch({ type: ADD_ERROR, payload: err.response.data });
     });
 };

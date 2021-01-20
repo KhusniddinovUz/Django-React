@@ -9,3 +9,4 @@ class TweetModel(models.Model):
     text = models.TextField(max_length=150, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)
+    likes = models.IntegerField(default=0)

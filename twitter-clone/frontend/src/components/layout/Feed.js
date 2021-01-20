@@ -1,12 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Tweet from './Tweet';
+import { v4 as uuidv4, v4 } from 'uuid';
+import { loadTweets } from '../../action/tweet';
 
 const Feed = () => {
+  useEffect(() => {
+    dispatch(loadTweets());
+  }, []);
+  const dispatch = useDispatch();
   const tweets = useSelector((state) => state.tweet.tweets);
   return (
     <div className='Feed container'>
-      {tweets && tweets.map((tweet) => <Tweet tweet={tweet} />)}
+      {tweets && tweets.map((tweet) => <Tweet key={v4()} tweet={tweet} />)}
     </div>
   );
 };

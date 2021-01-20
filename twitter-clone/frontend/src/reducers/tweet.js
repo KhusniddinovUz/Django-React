@@ -1,4 +1,4 @@
-import { TWEET_ADD } from '../action/types';
+import { TWEET_ADD, TWEET_LOAD } from '../action/types';
 const initialState = {
   tweets: [],
 };
@@ -11,6 +11,11 @@ const tweet = (state = initialState, action) => {
       return {
         ...state,
         tweets: newTweets,
+      };
+    case TWEET_LOAD:
+      return {
+        ...state,
+        tweets: action.payload,
       };
     default:
       return state;

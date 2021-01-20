@@ -1,73 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8a91927-436b-4ec1-a071-433fb7d8dbd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/Pipfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/accounts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/tweets/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/twitter/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/twitter/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/twitter/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/twitter/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend1/twitter/twitter/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/accounts/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/tweets/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/twitter/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/twitter/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/twitter/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/twitter/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/twitter/wsgi.py" beforeDir="false" />
-    </list>
+    <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1nJqVSS0aZg3gKaTOchI8ZRP4NR" />
+  <component name="ProjectId" id="1nJqvAfl45ChH6Q7xBoTxmIZiSl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -89,8 +23,8 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
-      <module name="backend" />
+    <configuration name="twitter" type="Python.DjangoServer" factoryName="Django server">
+      <module name="twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -116,17 +50,57 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8a91927-436b-4ec1-a071-433fb7d8dbd5" name="Default Changelist" comment="" />
-      <created>1611118564807</created>
+      <changelist id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="" />
+      <created>1611118769016</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1611118564807</updated>
-      <workItem from="1611118600362" duration="77000" />
-      <workItem from="1611118691671" duration="77000" />
+      <updated>1611118769016</updated>
+      <workItem from="1611118788385" duration="434000" />
+      <workItem from="1611119387357" duration="763000" />
     </task>
+    <task id="LOCAL-00001" summary="Update pipenv">
+      <created>1611123244600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611123244600</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change alertOptions">
+      <created>1611123265858</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611123265858</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update pipenv">
+      <created>1611123284772</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611123284772</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update pipenv" />
+    <MESSAGE value="Change alertOptions" />
+    <MESSAGE value="update pipenv" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pipenv" />
   </component>
 </project>

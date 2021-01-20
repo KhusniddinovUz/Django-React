@@ -20,6 +20,10 @@ const Alerts = (props) => {
     alert.error(`${String(msg.non_field_errors)}`);
     dispatch({ type: REMOVE_ERROR });
   }
+  if (msg.text) {
+    alert.error(`${String(msg.text)}`);
+    dispatch({ type: REMOVE_ERROR });
+  }
 
   return <div></div>;
 };

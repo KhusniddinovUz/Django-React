@@ -73,11 +73,6 @@ $gray: #cbd6e2;
         font-weight: 700;
       }
       form {
-        .profile-image {
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-        }
         textarea {
           margin-left: 30px;
           width: 80%;
@@ -88,6 +83,16 @@ $gray: #cbd6e2;
           &::placeholder {
             font-size: 20px;
           }
+        }
+      }
+    }
+    .Main {
+      border-right: 1px solid $gray;
+      .Feed {
+        padding: 0;
+        border-top: 1px solid $gray;
+        .Tweet {
+          border-bottom: 1px solid $gray;
         }
       }
     }
@@ -107,6 +112,25 @@ $gray: #cbd6e2;
   border-radius: 30px;
   &:hover {
     color: #fff;
+  }
+}
+.profile-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.username {
+  font-weight: 700;
+}
+.tweet-icon {
+  color: $gray;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  &:hover {
+    color: $maincolor;
+    background: $hovercolor;
   }
 }
 

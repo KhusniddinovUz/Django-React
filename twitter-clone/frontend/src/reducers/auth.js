@@ -29,6 +29,8 @@ const auth = (state = initialState, action) => {
       return {
         ...state,
         isAuthenticated: true,
+        email: action.payload.email,
+        username: action.payload.username,
       };
     case USER_NOTLOADED:
       return {

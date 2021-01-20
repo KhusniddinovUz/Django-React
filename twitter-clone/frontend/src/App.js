@@ -32,7 +32,7 @@ const App = () => {
             render={() => (
               <div className='Home'>
                 <Navbar />
-                <div className=''>
+                <div className='Main'>
                   <TweetHome />
                   <Feed />
                 </div>

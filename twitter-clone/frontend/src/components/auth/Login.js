@@ -16,7 +16,6 @@ const Login = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(user));
-    // console.log(user);
   };
 
   if (auth.isAuthenticated) {

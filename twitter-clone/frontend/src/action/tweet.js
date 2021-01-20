@@ -5,7 +5,6 @@ import { url } from '../url';
 //Add Tweet
 export const addTweet = (tweet) => (dispatch, getState) => {
   const token = getState().auth.token;
-  console.log(`addTweet ${token}`);
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -15,11 +14,9 @@ export const addTweet = (tweet) => (dispatch, getState) => {
   axios
     .post(`${url}/tweet/`, tweet, config)
     .then((res) => {
-      console.log(res.data);
       dispatch({ type: TWEET_ADD, payload: res.data });
     })
     .catch((err) => {
-      console.log(err);
       dispatch({ type: ADD_ERROR, payload: err.response.data });
     });
 };
@@ -27,7 +24,6 @@ export const addTweet = (tweet) => (dispatch, getState) => {
 //Load Tweets
 export const loadTweets = () => (dispatch, getState) => {
   const token = getState().auth.token;
-  console.log(`addTweet ${token}`);
   const config = {
     headers: {
       'Content-Type': 'application/json',

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'knox',
     'corsheaders',
     'accounts',
+    'tweets'
 ]
 
 REST_FRAMEWORK = {

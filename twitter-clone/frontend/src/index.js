@@ -9,7 +9,7 @@ import { Provider as AlertProvider } from 'react-alert';
 
 const alertConfig = {
   position: 'top center',
-  timeout: '5000',
+  timeout: 5000,
 };
 
 ReactDOM.render(

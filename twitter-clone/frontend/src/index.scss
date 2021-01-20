@@ -3,6 +3,7 @@
 //Variables
 $maincolor: #228cf5;
 $hovercolor: #e9f3fe;
+$gray: #cbd6e2;
 
 * {
   font-family: 'Lato';
@@ -18,7 +19,7 @@ $hovercolor: #e9f3fe;
     grid-template-columns: 1fr 2fr 1.5fr;
     .Navbar {
       font-weight: 700;
-      border-right: 1px solid black;
+      border-right: 1px solid $gray;
       ul {
         div {
           border: none;
@@ -63,13 +64,12 @@ $hovercolor: #e9f3fe;
       }
     }
     .TweetHome {
-      border-right: 1px solid #000;
-      border-bottom: 1px solid #25292e;
       height: 200px;
+      border-bottom: 1px solid $gray;
       & > div {
         padding: 10px 20px;
         font-size: 20px;
-        border-bottom: 1px solid #25292e;
+        border-bottom: 1px solid $gray;
         font-weight: 700;
       }
       form {

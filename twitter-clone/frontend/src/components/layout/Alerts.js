@@ -24,6 +24,10 @@ const Alerts = (props) => {
     alert.error(`${String(msg.text)}`);
     dispatch({ type: REMOVE_ERROR });
   }
+  if (msg.tweetAdded) {
+    alert.success(`${msg.tweetAdded}`);
+    dispatch({ type: REMOVE_ERROR });
+  }
 
   return <div></div>;
 };

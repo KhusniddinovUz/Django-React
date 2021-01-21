@@ -14,6 +14,7 @@ const TweetHome = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(addTweet({ text }));
+    setText('');
   };
   return (
     <div className='TweetHome'>

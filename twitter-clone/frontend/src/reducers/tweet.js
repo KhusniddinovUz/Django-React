@@ -7,7 +7,7 @@ const tweet = (state = initialState, action) => {
   switch (action.type) {
     case TWEET_ADD:
       const newTweets = [...state.tweets];
-      newTweets.push(action.payload);
+      newTweets.unshift(action.payload);
       return {
         ...state,
         tweets: newTweets,

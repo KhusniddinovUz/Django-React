@@ -17,7 +17,7 @@ const Tweet = (props) => {
           <img src={profile} className='profile-image' />
         </div>
         <div className='container'>
-          <span className='username'>{auth.username}</span>
+          <span className='username'>{props.tweet.username}</span>
           <div>{props.tweet.text}</div>
         </div>
       </div>

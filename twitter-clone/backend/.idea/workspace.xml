@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tweets/migrations/0002_auto_20210121_0414.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tweets/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
       <workItem from="1611124051276" duration="447000" />
       <workItem from="1611124520730" duration="4397000" />
       <workItem from="1611135590628" duration="5758000" />
-      <workItem from="1611190402234" duration="2462000" />
+      <workItem from="1611190402234" duration="7165000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>

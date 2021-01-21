@@ -1,5 +1,4 @@
 import React from 'react';
-import profile from '../../profile-image.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTweet } from '../../action/tweet';
 
@@ -14,7 +13,10 @@ const Tweet = (props) => {
     <div className='Tweet container p-2 '>
       <div className='d-flex'>
         <div>
-          <img src={profile} className='profile-image' />
+          <img
+            src={`https://ui-avatars.com/api/?name=${props.tweet.username}&background=random`}
+            className='profile-image'
+          />
         </div>
         <div className='container'>
           <span className='username'>{props.tweet.username}</span>

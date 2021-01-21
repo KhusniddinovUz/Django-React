@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import image from '../../profile-image.jpg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addTweet } from '../../action/tweet';
 
 const TweetHome = () => {
   const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
   const [text, setText] = useState('');
 
   const onChange = (e) => {
@@ -21,7 +21,11 @@ const TweetHome = () => {
       <div>Home</div>
       <form className='p-4' onSubmit={onSubmit}>
         <div className='container d-flex justify-content-center'>
-          <img src={image} className='profile-image' alt='profile' />
+          <img
+            src={`https://ui-avatars.com/api/?name=${auth.username}`}
+            className='profile-image'
+            alt='profile'
+          />
           <textarea
             type='text'
             placeholder="What's happening?"

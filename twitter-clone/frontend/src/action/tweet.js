@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_ERROR, TWEET_ADD, TWEET_LOAD } from './types';
+import { ADD_ERROR, TWEET_ADD, TWEET_DELETE, TWEET_LOAD } from './types';
 import { url } from '../url';
 
 //Add Tweet
@@ -38,6 +38,25 @@ export const loadTweets = () => (dispatch, getState) => {
     .get(`${url}/tweet`, config)
     .then((res) => {
       dispatch({ type: TWEET_LOAD, payload: res.data });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_ERROR, payload: err.response.data });
+    });
+};
+
+//Delete Tweet
+export const deleteTweet = (id) => (dispatch, getState) => {
+  const token = getState().auth.token;
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Token ${token}`,
+    },
+  };
+  axios
+    .delete(`${url}/tweet/${id}/`, config)
+    .then(() => {
+      dispatch({ type: TWEET_DELETE, payload: id });
     })
     .catch((err) => {
       dispatch({ type: ADD_ERROR, payload: err.response.data });

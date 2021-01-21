@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/action/tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/action/tweet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/action/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/action/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,7 @@
       <workItem from="1611124051276" duration="447000" />
       <workItem from="1611124520730" duration="4397000" />
       <workItem from="1611135590628" duration="5758000" />
-      <workItem from="1611190402234" duration="1104000" />
+      <workItem from="1611190402234" duration="1951000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611149546541</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="return sorted tweets">
+      <created>1611191711543</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611191711543</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +169,7 @@
     <MESSAGE value="create serializers.py for Tweet" />
     <MESSAGE value="Create viewset for Tweet" />
     <MESSAGE value="Setup owner automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup owner automatically" />
+    <MESSAGE value="return sorted tweets" />
+    <option name="LAST_COMMIT_MESSAGE" value="return sorted tweets" />
   </component>
 </project>

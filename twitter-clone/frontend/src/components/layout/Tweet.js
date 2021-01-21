@@ -1,9 +1,15 @@
 import React from 'react';
 import profile from '../../profile-image.jpg';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteTweet } from '../../action/tweet';
 
 const Tweet = (props) => {
+  const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
+
+  const onDelete = () => {
+    dispatch(deleteTweet(props.tweet.id));
+  };
   return (
     <div className='Tweet container p-2 '>
       <div className='d-flex'>
@@ -19,7 +25,7 @@ const Tweet = (props) => {
         <i className='far fa-comment tweet-icon' />
         <i className='far fa-heart tweet-icon' />
         <i className='far fa-share-square tweet-icon' />
-        <i className='far fa-trash-alt tweet-icon' />
+        <i className='far fa-trash-alt tweet-icon' onClick={onDelete} />
       </div>
     </div>
   );

@@ -15,5 +15,4 @@ class TweetViewset(viewsets.ModelViewSet):
         return ordered
 
     def perform_create(self, serializer):
-        print(self.request.user)
         serializer.save(owner=self.request.user)

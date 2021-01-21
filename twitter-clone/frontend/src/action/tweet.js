@@ -56,6 +56,10 @@ export const deleteTweet = (id) => (dispatch, getState) => {
   axios
     .delete(`${url}/tweet/${id}/`, config)
     .then(() => {
+      dispatch({
+        type: ADD_ERROR,
+        payload: { deletedTweet: 'Tweet has been deleted' },
+      });
       dispatch({ type: TWEET_DELETE, payload: id });
     })
     .catch((err) => {

@@ -28,6 +28,10 @@ const Alerts = (props) => {
     alert.success(`${msg.tweetAdded}`);
     dispatch({ type: REMOVE_ERROR });
   }
+  if (msg.deletedTweet) {
+    alert.success(`${msg.deletedTweet}`);
+    dispatch({ type: REMOVE_ERROR });
+  }
 
   return <div></div>;
 };

@@ -1,10 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { deleteTweet } from '../../action/tweet';
 
 const Tweet = (props) => {
   const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
 
   const onDelete = () => {
     dispatch(deleteTweet(props.tweet.id));
@@ -16,6 +15,7 @@ const Tweet = (props) => {
           <img
             src={`https://ui-avatars.com/api/?name=${props.tweet.username}&background=random`}
             className='profile-image'
+            alt='profile'
           />
         </div>
         <div className='container'>

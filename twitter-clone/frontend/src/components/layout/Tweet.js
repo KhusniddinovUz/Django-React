@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
-import {deleteTweet} from '../../action/tweet';
 
 const Tweet = (props) => {
     const [liked, setLiked] = useState(false)
-    const dispatch = useDispatch();
 
     let likeClass = ''
 
@@ -18,9 +15,7 @@ const Tweet = (props) => {
         setLiked(like => !like)
     }
 
-    const onDelete = () => {
-        dispatch(deleteTweet(props.tweet.id));
-    };
+
     return (
         <div className='Tweet container p-2 '>
             <div className='d-flex'>
@@ -43,7 +38,6 @@ const Tweet = (props) => {
                     <span>0</span>
                 </div>
                 <i className='far fa-share-square tweet-icon'/>
-                <i className='far fa-trash-alt tweet-icon' onClick={onDelete}/>
             </div>
         </div>
     );

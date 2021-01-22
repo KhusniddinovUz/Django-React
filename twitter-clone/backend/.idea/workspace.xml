@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layout/Tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layout/Tweet.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
       <workItem from="1611190402234" duration="7714000" />
       <workItem from="1611205820948" duration="2620000" />
       <workItem from="1611276601219" duration="56000" />
-      <workItem from="1611302051346" duration="904000" />
+      <workItem from="1611302051346" duration="1812000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>

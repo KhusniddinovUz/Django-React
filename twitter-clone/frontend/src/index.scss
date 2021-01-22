@@ -16,7 +16,7 @@ $gray: #cbd6e2;
     }
   }
 
-  .Home {
+  .Main {
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr;
 
@@ -101,7 +101,7 @@ $gray: #cbd6e2;
       }
     }
 
-    .Main {
+    .Home {
       border-right: 1px solid $gray;
 
       .Feed {

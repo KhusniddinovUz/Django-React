@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 } from 'uuid';
+import axios from 'axios';
+
 function App() {
   const list = [
     {
@@ -19,6 +21,19 @@ function App() {
     },
   ];
   const [state, setState] = useState(list);
+
+  const getTodos = () => {
+    axios
+      .get('http://localhost:8000/api/')
+      .then((res) => {
+        setState(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getTodos();
+  }, []);
 
   return (
     <div className='App'>

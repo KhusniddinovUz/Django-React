@@ -36,12 +36,12 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className='App container mt-4'>
       {state &&
         state.map((item) => (
-          <div key={v4()}>
-            <h1>{item.title}</h1>
-            <p>{item.body}</p>
+          <div key={v4()} className='pl-5 pr-5 container card mt-4'>
+            <h1 className='mx-auto'>{item.title}</h1>
+            <p className='text-center'>{item.body}</p>
           </div>
         ))}
     </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 } from 'uuid';
 function App() {
   const list = [
     {
@@ -23,7 +24,7 @@ function App() {
     <div className='App'>
       {state &&
         state.map((item) => (
-          <div key={item.id}>
+          <div key={v4()}>
             <h1>{item.title}</h1>
             <p>{item.body}</p>
           </div>

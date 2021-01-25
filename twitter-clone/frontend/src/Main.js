@@ -10,7 +10,7 @@ const Main = () => {
       <Navbar />
       <Switch>
         <Route exact path='/home' component={Home} />
-        <Route exact path='/profile' component={Profile} />
+        <Route exact path='/home/profile' component={Profile} />
       </Switch>
     </div>
   );

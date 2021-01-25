@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className='list-group-item'>
           <li className='active-nav d-flex align-items-center'>
             <i className='fas fa-home' />
-            <span>Home</span>
+            <NavLink to='/home'>Home</NavLink>
           </li>
         </div>
         <div className='list-group-item'>
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className='list-group-item'>
           <li className='d-flex align-items-center'>
             <i className='far fa-user' />
-            <NavLink to='/profile'>Profile</NavLink>
+            <NavLink to='/home/profile'>Profile</NavLink>
           </li>
         </div>
         <div className='list-group-item'>

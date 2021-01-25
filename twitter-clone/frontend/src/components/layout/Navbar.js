@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className='list-group-item'>
           <li className='d-flex align-items-center'>
             <i className='far fa-user' />
-            <span>Profile</span>
+            <a href='/profile'>Profile</a>
           </li>
         </div>
         <div className='list-group-item'>

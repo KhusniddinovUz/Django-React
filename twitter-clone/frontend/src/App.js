@@ -11,7 +11,6 @@ import {
 import { loadUser } from './action/auth';
 import Alerts from './components/layout/Alerts';
 import Main from './Main';
-import Home from './components/NavComponents/Home';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,9 +24,10 @@ const App = () => {
         <Alerts />
         {!auth.isAuthenticated ? <Redirect to='/login' /> : ''}
         <Switch>
-          <Route exact path='/' component={Main} />
-          <Route path='/register' component={Signup} />
-          <Route path='/login' component={Login} />
+          <Route path='/home' component={Main} />
+          <Route exact path='/register' component={Signup} />
+          <Route exact path='/login' component={Login} />
+          <Redirect from='/' to='/home' />
         </Switch>
       </div>
     </Router>

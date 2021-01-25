@@ -1,23 +1,17 @@
 import React from 'react';
-import {
-  Switch,
-  Route,
-  BrowserRouter as Router,
-  Redirect,
-} from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Home from './components/NavComponents/Home';
+import Profile from './components/NavComponents/Profile';
 
 const Main = () => {
   return (
     <div className='Main'>
-      {/* <Redirect to='/home' /> */}
       <Navbar />
-      <Router>
-        <Switch>
-          <Route path='/home' component={Home} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path='/home' component={Home} />
+        <Route path='/profile' component={Profile} />
+      </Switch>
     </div>
   );
 };

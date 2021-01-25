@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   if (auth.isAuthenticated) {
-    return <Redirect to='' />;
+    return <Redirect to='/home' />;
   }
 
   const { username, password } = user;

@@ -37,7 +37,7 @@ const SignUp = () => {
   };
 
   if (auth.isAuthenticated) {
-    return <Redirect to='' />;
+    return <Redirect to='/home' />;
   }
 
   return (

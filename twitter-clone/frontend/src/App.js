@@ -11,6 +11,7 @@ import {
 import { loadUser } from './action/auth';
 import Alerts from './components/layout/Alerts';
 import Main from './Main';
+import Home from './components/NavComponents/Home';
 
 const App = () => {
   const dispatch = useDispatch();

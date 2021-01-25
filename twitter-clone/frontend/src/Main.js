@@ -9,8 +9,8 @@ const Main = () => {
     <div className='Main'>
       <Navbar />
       <Switch>
-        <Route path='/home' component={Home} />
-        <Route path='/profile' component={Profile} />
+        <Route exact path='/home' component={Home} />
+        <Route exact path='/profile' component={Profile} />
       </Switch>
     </div>
   );

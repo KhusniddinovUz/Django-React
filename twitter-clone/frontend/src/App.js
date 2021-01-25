@@ -27,7 +27,7 @@ const App = () => {
           <Route path='/home' component={Main} />
           <Route exact path='/register' component={Signup} />
           <Route exact path='/login' component={Login} />
-          <Redirect from='/' to='/home' />
+          {/* <Redirect from='/' to='/home' /> */}
         </Switch>
       </div>
     </Router>

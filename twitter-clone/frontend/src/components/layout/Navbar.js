@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className='list-group-item'>
           <li className='d-flex align-items-center'>
             <i className='far fa-user' />
-            <a href='/profile'>Profile</a>
+            <NavLink to='/profile'>Profile</NavLink>
           </li>
         </div>
         <div className='list-group-item'>

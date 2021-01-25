@@ -7,7 +7,6 @@ import {
 
 const initialState = {
   isAuthenticated: false,
-  isLoading: false,
   token: localStorage.getItem('twitter-token'),
   username: null,
   email: null,

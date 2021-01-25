@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c3937c-51f5-4584-a1cc-b65061da4b2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/NavComponents/OwnerTweets.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/NavComponents/OwnerTweets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <workItem from="1611302051346" duration="1812000" />
       <workItem from="1611505706642" duration="2374000" />
       <workItem from="1611548108324" duration="1667000" />
-      <workItem from="1611573278372" duration="1982000" />
+      <workItem from="1611573278372" duration="4551000" />
     </task>
     <task id="LOCAL-00001" summary="Update pipenv">
       <created>1611123244600</created>

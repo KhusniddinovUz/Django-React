@@ -108,22 +108,25 @@ $gray: #cbd6e2;
       }
     }
 
+    .Profile {
+      border-right: 1px solid $gray;
+    }
+
     .Home {
       border-right: 1px solid $gray;
 
       .Feed {
         padding: 0;
         border-top: 1px solid $gray;
-
-        .Tweet {
-          border-bottom: 1px solid $gray;
-        }
       }
     }
   }
 }
 
 //Utility classes
+.Tweet {
+  border-bottom: 1px solid $gray;
+}
 .active-nav {
   color: $maincolor;
 

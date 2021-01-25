@@ -7,3 +7,4 @@ export const REMOVE_ERROR = 'REMOVE_ERROR';
 export const TWEET_ADD = 'TWEET_ADD';
 export const TWEET_LOAD = 'TWEET_LOAD';
 export const TWEET_DELETE = 'TWEET_DELETE';
+export const GET_OWN_TWEET = 'GET_OWN_TWEET';

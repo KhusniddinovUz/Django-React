@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { ADD_ERROR, TWEET_ADD, TWEET_DELETE, TWEET_LOAD } from './types';
+import {
+  ADD_ERROR,
+  TWEET_ADD,
+  TWEET_DELETE,
+  TWEET_LOAD,
+  GET_OWN_TWEET,
+} from './types';
 import { url } from '../url';
 
 //Add Tweet
@@ -61,6 +67,24 @@ export const deleteTweet = (id) => (dispatch, getState) => {
         payload: { deletedTweet: 'Tweet has been deleted' },
       });
       dispatch({ type: TWEET_DELETE, payload: id });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_ERROR, payload: err.response.data });
+    });
+};
+
+export const getOwnTweets = () => (dispatch, getState) => {
+  const token = getState().auth.token;
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Token ${token}`,
+    },
+  };
+  axios
+    .get(`${url}/tweet/own/`, config)
+    .then((res) => {
+      dispatch({ type: GET_OWN_TWEET, payload: res.data });
     })
     .catch((err) => {
       dispatch({ type: ADD_ERROR, payload: err.response.data });

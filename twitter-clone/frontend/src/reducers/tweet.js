@@ -1,6 +1,12 @@
-import { TWEET_ADD, TWEET_LOAD, TWEET_DELETE } from '../action/types';
+import {
+  TWEET_ADD,
+  TWEET_LOAD,
+  TWEET_DELETE,
+  GET_OWN_TWEET,
+} from '../action/types';
 const initialState = {
   tweets: [],
+  owntweets: [],
 };
 
 const tweet = (state = initialState, action) => {
@@ -21,6 +27,11 @@ const tweet = (state = initialState, action) => {
       return {
         ...state,
         tweets: state.tweets.filter((tweet) => tweet.id !== action.payload),
+      };
+    case GET_OWN_TWEET:
+      return {
+        ...state,
+        owntweets: action.payload,
       };
     default:
       return state;

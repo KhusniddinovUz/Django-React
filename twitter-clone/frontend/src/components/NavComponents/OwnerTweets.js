@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Tweet from '../layout/Tweet';
 import { v4 } from 'uuid';
 
 const OwnerTweets = () => {
-  return <div className='OwnerTweets'></div>;
+  const tweets = useSelector((state) => state.tweet.owntweets);
+  return (
+    <div className='OwnerTweets'>
+      {tweets && tweets.map((tweet) => <Tweet tweet={tweet} key={v4()} />)}
+    </div>
+  );
 };
 
 export default OwnerTweets;

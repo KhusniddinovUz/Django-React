@@ -16,3 +16,14 @@ class TweetViewset(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user, username=self.request.user.username)
+
+
+class OwnersTweet(viewsets.ModelViewSet):
+    permission_classes = [
+        permissions.IsAuthenticated
+    ]
+    serializer_class = TweetSerializer
+
+    def get_queryset(self):
+        ordered = TweetModel.objects.filter(owner=self.request.user)
+        return ordered

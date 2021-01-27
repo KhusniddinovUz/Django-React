@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'twitter-clone',
         'USER': 'postgres',
-        'PASSWORD': 'root',
+        'PASSWORD': 'khuz0401',
         'HOST': 'localhost',
         'PORT': '5432'
     }

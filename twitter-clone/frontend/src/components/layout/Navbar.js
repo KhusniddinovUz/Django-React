@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const onClick = (e) => {};
+  const className = 'list-group-item';
+  const active = 'active-nav';
+  const onClick = (e) => {
+    if (e.target.tagName === 'LI') {
+      Array.from(document.getElementsByClassName(className)).forEach(
+        (el) => (el.className = className)
+      );
+      e.target.parentElement.className = `${className} ${active}`;
+    } else if (e.target.parentElement.tagName === 'LI') {
+      Array.from(document.getElementsByClassName(className)).forEach(
+        (el) => (el.className = className)
+      );
+      e.target.parentElement.parentElement.className = `${className} ${active}`;
+    }
+  };
 
   return (
     <div className='Navbar'>

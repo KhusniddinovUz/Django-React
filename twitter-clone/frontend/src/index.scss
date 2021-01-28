@@ -120,7 +120,14 @@ $gray: #cbd6e2;
 
 //Utility classes
 .Tweet {
+  position: relative;
   border-bottom: 1px solid $gray;
+  div#time {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.8;
+  }
 }
 .active-nav {
   color: $maincolor !important;

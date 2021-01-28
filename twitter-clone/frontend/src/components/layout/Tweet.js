@@ -1,17 +1,19 @@
 import React from 'react';
+import moment from 'moment';
 
-const Tweet = (props) => {
+const Tweet = ({ tweet }) => {
   return (
     <div className='Tweet container p-3 d-flex'>
       <img
-        src={`https://ui-avatars.com/api/?name=${props.tweet.username}&background=random`}
+        src={`https://ui-avatars.com/api/?name=${tweet.username}&background=random`}
         className='profile-image'
         alt='profile'
       />
       <div className='container'>
-        <span className='username'>{props.tweet.username}</span>
-        <div>{props.tweet.text}</div>
+        <span className='username'>{tweet.username}</span>
+        <div>{tweet.text}</div>
       </div>
+      <div id='time'>{moment(tweet.created_at).format('MMM Do YYYY')}</div>
     </div>
   );
 };

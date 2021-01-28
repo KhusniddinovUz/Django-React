@@ -4,10 +4,10 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/NavComponents/Home';
 import Profile from './components/NavComponents/Profile';
 
-const Main = () => {
+const Main = (props) => {
   return (
     <div className='Main'>
-      <Navbar />
+      <Navbar props={props} />
       <Switch>
         <Route exact path='/home' component={Home} />
         <Route exact path='/home/profile' component={Profile} />

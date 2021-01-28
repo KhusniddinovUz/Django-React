@@ -1,7 +1,6 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 
-const Nav = ({ iconClass, name }) => {
+const Nav = ({ props, iconClass, name }) => {
   const className = 'd-flex align-items-center list-group-item';
   const active = 'active-nav';
   const onClick = (e) => {
@@ -10,13 +9,21 @@ const Nav = ({ iconClass, name }) => {
         (el) => (el.className = className)
       );
       e.target.className = `${className} ${active}`;
-      return <Redirect to={`/home/${name}`} />;
+      if (name == 'Home') {
+        props.history.push(`/${name.toLowerCase()}`);
+      } else {
+        props.history.push(`/home/${name.toLowerCase()}`);
+      }
     } else if (e.target.parentElement.tagName === 'LI') {
       Array.from(document.getElementsByClassName('list-group-item')).forEach(
         (el) => (el.className = className)
       );
       e.target.parentElement.className = `${className} ${active}`;
-      return <Redirect to={`/home/${name}`} />;
+      if (name == 'Home') {
+        props.history.push(`/${name.toLowerCase()}`);
+      } else {
+        props.history.push(`/home/${name.toLowerCase()}`);
+      }
     }
   };
 

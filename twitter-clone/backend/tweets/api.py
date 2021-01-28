@@ -25,5 +25,5 @@ class OwnersTweet(viewsets.ModelViewSet):
     serializer_class = TweetSerializer
 
     def get_queryset(self):
-        ordered = TweetModel.objects.filter(owner=self.request.user)
+        ordered = TweetModel.objects.filter(owner=self.request.user).order_by('-created_at')
         return ordered

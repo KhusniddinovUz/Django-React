@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nav = ({ props, iconClass, name }) => {
+const Nav = ({ props, iconClass, name, activeClass }) => {
   const className = 'd-flex align-items-center list-group-item';
   const active = 'active-nav';
   const onClick = (e) => {
@@ -28,7 +28,10 @@ const Nav = ({ props, iconClass, name }) => {
   };
 
   return (
-    <li onClick={onClick} className='d-flex align-items-center list-group-item'>
+    <li
+      onClick={onClick}
+      className={`d-flex align-items-center list-group-item ${activeClass}`}
+    >
       <i className={iconClass} />
       <span>{name}</span>
     </li>

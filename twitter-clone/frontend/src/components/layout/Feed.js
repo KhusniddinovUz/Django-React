@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Tweet from './Tweet';
 import { v4 } from 'uuid';
-import { loadTweets, getOwnTweets } from '../../action/tweet';
+import { loadTweets } from '../../action/tweet';
 
 const Feed = () => {
   useEffect(() => {
     dispatch(loadTweets());
-    dispatch(getOwnTweets());
   }, []);
   const dispatch = useDispatch();
   const tweets = useSelector((state) => state.tweet.tweets);

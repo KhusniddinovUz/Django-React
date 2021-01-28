@@ -9,7 +9,7 @@ const Nav = ({ props, iconClass, name }) => {
         (el) => (el.className = className)
       );
       e.target.className = `${className} ${active}`;
-      if (name == 'Home') {
+      if (name === 'Home') {
         props.history.push(`/${name.toLowerCase()}`);
       } else {
         props.history.push(`/home/${name.toLowerCase()}`);
@@ -19,7 +19,7 @@ const Nav = ({ props, iconClass, name }) => {
         (el) => (el.className = className)
       );
       e.target.parentElement.className = `${className} ${active}`;
-      if (name == 'Home') {
+      if (name === 'Home') {
         props.history.push(`/${name.toLowerCase()}`);
       } else {
         props.history.push(`/home/${name.toLowerCase()}`);

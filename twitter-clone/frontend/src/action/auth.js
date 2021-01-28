@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { url } from '../url';
+import { url } from '../components/data/url';
 import {
   ADD_ERROR,
   LOGIN_SUCCESS,

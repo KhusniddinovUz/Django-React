@@ -29,10 +29,34 @@ $gray: #cbd6e2;
           text-decoration: none;
           color: inherit;
         }
-        div {
+        li {
+          font-size: 20px;
           border: none;
-          margin: 0;
+          display: inline-block !important;
+          list-style-type: none;
+          padding: 10px 30px 10px 10px;
+          border-radius: 40px;
+          margin-top: 10px;
+          cursor: pointer;
 
+          &:hover {
+            background: $hovercolor;
+            color: $maincolor;
+
+            i {
+              color: $maincolor !important;
+            }
+            a {
+              color: $maincolor;
+            }
+          }
+
+          i {
+            color: #25292e;
+            border: #25292e;
+            font-size: 25px !important;
+            margin-right: 15px;
+          }
           #twitter {
             color: $maincolor;
             font-size: 30px;
@@ -41,35 +65,6 @@ $gray: #cbd6e2;
 
             &:hover {
               background: $hovercolor;
-            }
-          }
-
-          li {
-            font-size: 20px;
-            border: none;
-            display: inline-block;
-            list-style-type: none;
-            padding: 10px 30px 10px 10px;
-            border-radius: 40px;
-            cursor: pointer;
-
-            &:hover {
-              background: $hovercolor;
-              color: $maincolor;
-
-              i {
-                color: $maincolor !important;
-              }
-              a {
-                color: $maincolor;
-              }
-            }
-
-            i {
-              color: #25292e;
-              border: #25292e;
-              font-size: 25px !important;
-              margin-right: 15px;
             }
           }
 
@@ -128,7 +123,7 @@ $gray: #cbd6e2;
   border-bottom: 1px solid $gray;
 }
 .active-nav {
-  color: $maincolor;
+  color: $maincolor !important;
 
   i {
     color: $maincolor !important;

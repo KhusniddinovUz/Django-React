@@ -6,7 +6,7 @@ import {
   TWEET_LOAD,
   GET_OWN_TWEET,
 } from './types';
-import { url } from '../url';
+import { url } from '../components/data/url';
 
 //Add Tweet
 export const addTweet = (tweet) => (dispatch, getState) => {

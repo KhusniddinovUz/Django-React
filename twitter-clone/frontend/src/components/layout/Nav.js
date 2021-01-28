@@ -1,14 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeNav } from '../../action/nav';
 
 const Nav = ({ props, iconClass, name, activeClass }) => {
+  const dispatch = useDispatch();
   const className = 'd-flex align-items-center list-group-item';
-  const active = 'active-nav';
   const onClick = (e) => {
+    dispatch(changeNav(name));
     if (e.target.tagName === 'LI') {
       Array.from(document.getElementsByClassName('list-group-item')).forEach(
         (el) => (el.className = className)
       );
-      e.target.className = `${className} ${active}`;
       if (name === 'Home') {
         props.history.push(`/${name.toLowerCase()}`);
       } else {
@@ -18,7 +20,6 @@ const Nav = ({ props, iconClass, name, activeClass }) => {
       Array.from(document.getElementsByClassName('list-group-item')).forEach(
         (el) => (el.className = className)
       );
-      e.target.parentElement.className = `${className} ${active}`;
       if (name === 'Home') {
         props.history.push(`/${name.toLowerCase()}`);
       } else {

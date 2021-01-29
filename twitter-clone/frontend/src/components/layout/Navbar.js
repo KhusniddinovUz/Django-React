@@ -9,10 +9,11 @@ const Navbar = ({ props }) => {
   console.log(active);
   return (
     <div className='Navbar'>
-      <ul className='list-group w-75 mx-auto'>
-        <li className='list-group-item'>
+      <ul className='w-75 mx-auto'>
+        <li className='logo'>
           <i className='fab fa-twitter' id='twitter' />
         </li>
+        <br />
         {nav.map((item) => {
           let activeClass = '';
           if (active === item.name) activeClass = 'active-nav';
@@ -26,10 +27,10 @@ const Navbar = ({ props }) => {
             />
           );
         })}
-        <li className='mx-auto'>
-          <button className='btn butn p-3'>Tweet</button>
-        </li>
       </ul>
+      <div className='w-75 mx-auto'>
+        <button className='w-100 btn butn p-3'>Tweet</button>
+      </div>
     </div>
   );
 };

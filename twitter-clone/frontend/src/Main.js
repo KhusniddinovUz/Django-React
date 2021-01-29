@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/NavComponents/Home';
 import Profile from './components/NavComponents/Profile';
 import Empty from './components/NavComponents/Empty';
+import Trends from './components/layout/Trends';
 
 const Main = (props) => {
   return (
@@ -16,6 +17,7 @@ const Main = (props) => {
         <Route exact path='/home/messages' component={Empty} />
         <Route exact path='/home/more' component={Empty} />
       </Switch>
+      <Trends />
     </div>
   );
 };

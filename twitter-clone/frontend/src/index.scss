@@ -92,7 +92,7 @@ $gray: #cbd6e2;
         border-radius: 30px;
         padding: 10px 20px;
       }
-      div {
+      > div {
         background: #ebeef0;
         border-radius: 20px;
         width: 70%;
@@ -100,6 +100,19 @@ $gray: #cbd6e2;
         padding: 10px 30px;
         font-weight: 700;
         text-align: left;
+      }
+      #lastusers {
+        span {
+          border-bottom: 1px solid black;
+          display: block;
+        }
+        div {
+          border-bottom: 1px solid $gray;
+          padding: 10px;
+          &:last-child {
+            border: none;
+          }
+        }
       }
     }
     .Empty {

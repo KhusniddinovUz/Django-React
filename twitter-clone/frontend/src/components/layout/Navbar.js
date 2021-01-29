@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 const Navbar = ({ props }) => {
   const active = useSelector((state) => state.nav.activeNav);
-  console.log(active);
   return (
     <div className='Navbar'>
       <ul className='w-75 mx-auto'>

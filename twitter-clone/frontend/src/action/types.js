@@ -9,3 +9,4 @@ export const TWEET_LOAD = 'TWEET_LOAD';
 export const TWEET_DELETE = 'TWEET_DELETE';
 export const GET_OWN_TWEET = 'GET_OWN_TWEET';
 export const CHANGE_NAV = 'CHANGE_NAV';
+export const GET_LAST_USERS = 'GET_LAST_USERS';

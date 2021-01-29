@@ -1,7 +1,9 @@
 import { GET_LAST_USERS, ADD_ERROR } from './types';
+import axios from 'axios';
+import { url } from '../components/data/url';
 
 // Get last users
-export const getLastUsers = () => {
+export const getLastUsers = () => (dispatch) => {
   const token = localStorage.getItem('twitter-token');
   const config = {
     headers: {

@@ -5,6 +5,7 @@ from knox.models import AuthToken
 from .serializers import RegisterSerializer, UserSerializer, LoginSerializer
 
 
+# All users
 class AllUsers(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     queryset = User.objects.all()
@@ -48,3 +49,12 @@ class UserAPI(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+# Recent users
+class GetRecentUsers(generics.ListAPIView):
+    permission_classes = [
+        permissions.IsAuthenticated
+    ]
+    queryset = User.objects.order_by('-id')[:5]
+    serializer_class = UserSerializer

@@ -13,7 +13,7 @@ const Profile = () => {
   return (
     <div className='Profile'>
       <div className='container p-4 text-center'>
-        {auth.username} {ownTweets} {ownTweets == 1 ? 'tweet' : 'tweets'}
+        {auth.username} {ownTweets} {ownTweets === 1 ? 'tweet' : 'tweets'}
       </div>
       <OwnerTweets />
     </div>

@@ -19,11 +19,13 @@ $gray: #cbd6e2;
   .Main {
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr;
+    .centr {
+      border-left: 1px solid $gray;
+      border-right: 1px solid $gray;
+    }
 
     .Navbar {
       font-weight: 700;
-      border-right: 1px solid $gray;
-      border-right: 1px solid $gray;
       height: 100vh;
 
       ul {
@@ -124,7 +126,7 @@ $gray: #cbd6e2;
 
     .TweetHome {
       height: 200px;
-      border: 1px solid $gray;
+      border-bottom: 1px solid $gray;
 
       & > div {
         padding: 10px 20px;
@@ -158,11 +160,9 @@ $gray: #cbd6e2;
     }
 
     .Home {
-      border-right: 1px solid $gray;
-
       .Feed {
         padding: 0;
-        border: 1px solid $gray;
+        border-top: 1px solid $gray;
       }
     }
   }

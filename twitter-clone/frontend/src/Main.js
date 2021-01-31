@@ -10,13 +10,15 @@ const Main = (props) => {
   return (
     <div className='Main'>
       <Navbar props={props} />
-      <Switch>
-        <Route exact path='/home' component={Home} />
-        <Route exact path='/home/profile' component={Profile} />
-        <Route exact path='/home/notifications' component={Empty} />
-        <Route exact path='/home/messages' component={Empty} />
-        <Route exact path='/home/more' component={Empty} />
-      </Switch>
+      <div className='centr'>
+        <Switch>
+          <Route exact path='/home' component={Home} />
+          <Route exact path='/home/profile' component={Profile} />
+          <Route exact path='/home/notifications' component={Empty} />
+          <Route exact path='/home/messages' component={Empty} />
+          <Route exact path='/home/more' component={Empty} />
+        </Switch>
+      </div>
       <Trends />
     </div>
   );

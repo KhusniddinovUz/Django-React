@@ -1,4 +1,4 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from knox.models import AuthToken
@@ -10,6 +10,8 @@ class AllUsers(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['username']
 
 
 # Register API

@@ -1,7 +1,8 @@
-import { GET_LAST_USERS } from '../action/types';
+import { GET_LAST_USERS, SEARCH_USERS } from '../action/types';
 
 const initialState = {
-  users: [],
+  lastusers: [],
+  foundusers: [],
 };
 
 const users = (state = initialState, action) => {
@@ -9,7 +10,12 @@ const users = (state = initialState, action) => {
     case GET_LAST_USERS:
       return {
         ...state,
-        users: action.payload,
+        lastusers: action.payload,
+      };
+    case SEARCH_USERS:
+      return {
+        ...state,
+        foundusers: action.payload,
       };
     default:
       return state;

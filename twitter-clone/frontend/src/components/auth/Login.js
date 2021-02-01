@@ -1,28 +1,28 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { login } from '../../action/auth';
 
 const Login = () => {
-  const [user, setUser] = useState({ username: '', password: '' });
+  const username = useRef();
+  const password = useRef();
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const changeHandler = (e) => {
-    const newuser = Object.assign({}, user, { [e.target.id]: e.target.value });
-    setUser(newuser);
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(user));
+    dispatch(
+      login({
+        username: username.current.value,
+        password: password.current.value,
+      })
+    );
   };
 
   if (auth.isAuthenticated) {
     return <Redirect to='/home' />;
   }
-
-  const { username, password } = user;
 
   return (
     <div className='container SignUp p-3'>
@@ -36,8 +36,7 @@ const Login = () => {
             className='form-control'
             id='username'
             placeholder='Enter Username'
-            onChange={changeHandler}
-            value={username}
+            ref={username}
           />
         </div>
 
@@ -49,8 +48,7 @@ const Login = () => {
             className='form-control'
             id='password'
             placeholder='Password'
-            onChange={changeHandler}
-            value={password}
+            ref={password}
           />
         </div>
         <div className='container d-flex align-items-center mt-2'>

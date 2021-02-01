@@ -1,33 +1,34 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../../action/auth';
 
 const SignUp = () => {
+  const email = useRef();
+  const username = useRef();
+  const password1 = useRef();
+  const password2 = useRef();
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
-  const [user, setUser] = useState({
-    username: '',
-    email: '',
-    password1: '',
-    password2: '',
-  });
   const [border, setBorder] = useState('form-control');
-  const { username, email, password1, password2 } = user;
   const submitHandler = (e) => {
     e.preventDefault();
     if (passwordValid()) {
-      dispatch(register({ username, email, password: password1 }));
+      dispatch(
+        register({
+          username: username.current.value,
+          email: email.current.value,
+          password: password1.current.value,
+        })
+      );
     }
   };
 
-  const changeHandler = (e) => {
-    const newuser = Object.assign({}, user, { [e.target.id]: e.target.value });
-    setUser(newuser);
-  };
-
   const passwordValid = () => {
-    if (user.password1 === user.password2 && user.password1.length > 6) {
+    if (
+      password1.current.value === password2.current.value &&
+      password1.current.value.length > 6
+    ) {
       setBorder('form-control');
       return true;
     } else {
@@ -52,8 +53,7 @@ const SignUp = () => {
             className='form-control'
             id='username'
             placeholder='Enter Username'
-            onChange={changeHandler}
-            value={username}
+            ref={username}
           />
         </div>
         <div className='form-group p-2 '>
@@ -65,8 +65,7 @@ const SignUp = () => {
             id='email'
             aria-describedby='emailHelp'
             placeholder='Enter email'
-            onChange={changeHandler}
-            value={email}
+            ref={email}
           />
         </div>
         <div className='form-group p-2'>
@@ -76,8 +75,7 @@ const SignUp = () => {
             className={border}
             id='password1'
             placeholder='Password'
-            onChange={changeHandler}
-            value={password1}
+            ref={password1}
           />
           <small>Must be 6 chars at least</small>
         </div>
@@ -88,8 +86,7 @@ const SignUp = () => {
             className={border}
             id='password2'
             placeholder='Password'
-            onChange={changeHandler}
-            value={password2}
+            ref={password2}
           />
         </div>
         <div className='container d-flex align-items-center mt-2'>

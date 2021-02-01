@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { getLastUsers } from '../../action/lastusers';
+import { getLastUsers } from '../../action/users';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 } from 'uuid';
 
 const Trends = () => {
-  const users = useSelector((state) => state.lastusers.users);
+  const users = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getLastUsers());

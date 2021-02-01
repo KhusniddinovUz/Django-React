@@ -4,7 +4,7 @@ const initialState = {
   users: [],
 };
 
-const lastusers = (state = initialState, action) => {
+const users = (state = initialState, action) => {
   switch (action.type) {
     case GET_LAST_USERS:
       return {
@@ -16,4 +16,4 @@ const lastusers = (state = initialState, action) => {
   }
 };
 
-export default lastusers;
+export default users;

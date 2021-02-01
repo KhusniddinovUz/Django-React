@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 } from 'uuid';
 
 const Trends = () => {
-  const users = useSelector((state) => state.users.users);
+  const users = useSelector((state) => state.users.lastusers);
   const dispatch = useDispatch();
 
   const searchHandler = (e) => {

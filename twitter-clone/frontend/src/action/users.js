@@ -29,7 +29,7 @@ export const searchUsers = (name) => (dispatch) => {
     },
   };
   axios
-    .get(`${url}/api/users?search=${name}`)
+    .get(`${url}/api/users?search=${name}`, config)
     .then((res) => {
       dispatch({ type: SEARCH_USERS, payload: res.data });
     })

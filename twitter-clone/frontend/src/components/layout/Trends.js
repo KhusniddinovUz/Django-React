@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { getLastUsers, searchUsers } from '../../action/users';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 } from 'uuid';
-import FoundUsers from './FoundUsers';
 
 const Trends = () => {
   const users = useSelector((state) => state.users.lastusers);
   const dispatch = useDispatch();
 
   const searchHandler = (e) => {
-    dispatch(searchUsers(e.target.value));
+    if (e.target.value.replace(/ /g, '') !== '')
+      dispatch(searchUsers(e.target.value));
   };
 
   useEffect(() => {
@@ -23,7 +23,6 @@ const Trends = () => {
         onChange={searchHandler}
         placeholder='Search users'
       />
-      <FoundUsers />
       <div className='mx-auto mt-4'>Trends for you</div>
       <div className='mx-auto mt-4' id='lastusers'>
         <span>New Users</span>
